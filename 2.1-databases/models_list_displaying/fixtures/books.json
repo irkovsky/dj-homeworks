@@ -4,17 +4,89 @@
     "pk": 1,
     "fields": {
       "name": "Война и мир",
-      "author": "Л.Н. Толстой",
-      "pub_date": "2018-02-27"
+      "author": "Лев Толстой",
+      "pub_date": "2021-01-10"
     }
   },
   {
     "model": "books.book",
     "pk": 2,
     "fields": {
+      "name": "Анна Каренина",
+      "author": "Лев Толстой",
+      "pub_date": "2021-01-10"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
       "name": "1984",
-      "author": "Джордж Оруэл",
-      "pub_date": "2016-12-06"
+      "author": "Джордж Оруэлл",
+      "pub_date": "2021-01-15"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "name": "Протестантская этика и дух капитализма",
+      "author": "Макс Вебер",
+      "pub_date": "2021-01-15"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 5,
+    "fields": {
+      "name": "Грокаем алгоритмы",
+      "author": "Адитья Бхаргава",
+      "pub_date": "2021-02-01"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 6,
+    "fields": {
+      "name": "Чистый код",
+      "author": "Роберт Мартин",
+      "pub_date": "2021-02-01"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 7,
+    "fields": {
+      "name": "Мастер и Маргарита",
+      "author": "Михаил Булгаков",
+      "pub_date": "2021-02-10"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 8,
+    "fields": {
+      "name": "Преступление и наказание",
+      "author": "Фёдор Достоевский",
+      "pub_date": "2021-03-05"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 9,
+    "fields": {
+      "name": "Идиот",
+      "author": "Фёдор Достоевский",
+      "pub_date": "2021-03-05"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 10,
+    "fields": {
+      "name": "Изучаем Python",
+      "author": "Марк Лутц",
+      "pub_date": "2021-03-20"
     }
   }
 ]
