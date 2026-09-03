@@ -49,5 +49,4 @@ def recipe_detail(request, dish_name):
             'recipe': None
         }
         
-    
     return render(request, 'calculator/index.html', context)
