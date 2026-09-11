@@ -10,6 +10,16 @@ Content-Type: application/json
   "title": "Помидор",
   "description": "Лучшие помидоры на рынке"
 }
+###
+
+# создание продукта
+POST {{baseUrl}}/products/
+Content-Type: application/json
+
+{
+  "title": "Огурец",
+  "description": "Самые хрустящие огурцы в городе"
+}
 
 ###
 
@@ -64,7 +74,7 @@ Content-Type: application/json
 ###
 
 # обновляем записи на складе
-PATCH {{baseUrl}}/stocks/4/
+PATCH {{baseUrl}}/stocks/1/
 Content-Type: application/json
 
 {
