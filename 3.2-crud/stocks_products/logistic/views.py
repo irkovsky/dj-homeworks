@@ -20,3 +20,16 @@ class StockViewSet(ModelViewSet):
     serializer_class = StockSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['products']
+    
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        search = self.request.query_params.get('search')
+        
+        if search:
+            queryset = queryset.filter(
+                Q(product__title__icontains=search) |
+                Q(product__description__icontains=search)
+            ).distimct()
+            
+        return queryset
+        
