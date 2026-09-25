@@ -33,20 +33,20 @@ Authorization: Token 63437c675a3ac9cac3710ae053c75ba78031b53b
 # получение объявлений irina
 GET {{baseUrl}}/advertisements/3/
 Content-Type: application/json
-Authorization: Token: 63437c675a3ac9cac3710ae053c75ba78031b53b
+Authorization: Token 63437c675a3ac9cac3710ae053c75ba78031b53b
 
 
 ###
 # получение объявлений irina
 GET {{baseUrl}}/advertisements/
 Content-Type: application/json
-Authorization: Token: 63437c675a3ac9cac3710ae053c75ba78031b53b
+Authorization: Token 63437c675a3ac9cac3710ae053c75ba78031b53b
 
 ###
 # получение объявлений admin
 GET {{baseUrl}}/advertisements/
 Content-Type: application/json
-Authorization: Token: 79cc2367e22880facb78de31c2e641d7ae9d3edf
+Authorization: Token 79cc2367e22880facb78de31c2e641d7ae9d3edf
 
 
 ###
