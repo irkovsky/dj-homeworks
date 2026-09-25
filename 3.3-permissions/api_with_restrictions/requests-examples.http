@@ -7,7 +7,6 @@ GET {{baseUrl}}/advertisements/
 Content-Type: application/json
 
 ###
-
 # создание объявления
 POST {{baseUrl}}/advertisements/
 Content-Type: application/json
@@ -17,6 +16,38 @@ Authorization: Token 9d242c7f5dbb76dfe5c73b8f4018b8a077387488
   "title": "Стул из массива",
   "description": "Мелкие дефекты"
 }
+
+###
+# создание объявления DRAFT
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 63437c675a3ac9cac3710ae053c75ba78031b53b
+
+{
+  "title": "Комод из Румынии",
+  "description": "Абсолютно новый",
+  "status": "DRAFT"
+}
+
+###
+# получение объявлений irina
+GET {{baseUrl}}/advertisements/3/
+Content-Type: application/json
+Authorization: Token: 63437c675a3ac9cac3710ae053c75ba78031b53b
+
+
+###
+# получение объявлений irina
+GET {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token: 63437c675a3ac9cac3710ae053c75ba78031b53b
+
+###
+# получение объявлений admin
+GET {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token: 79cc2367e22880facb78de31c2e641d7ae9d3edf
+
 
 ###
 
@@ -40,3 +71,15 @@ Content-Type: application/json
 # фильтрация по дате
 GET {{baseUrl}}/advertisements/?created_at_before=2027-10-01
 Content-Type: application/json
+
+###
+POST {{baseUrl}}/advertisements/2/favorite/
+Authorization: Token 79cc2367e22880facb78de31c2e641d7ae9d3edf
+
+###
+POST {{baseUrl}}/advertisements/2/favorite/
+Authorization: Token 9d242c7f5dbb76dfe5c73b8f4018b8a077387488
+
+###
+DELETE {{baseUrl}}/advertisements/2/favorite/
+Authorization: Token 63437c675a3ac9cac3710ae053c75ba78031b53b

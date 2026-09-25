@@ -1,6 +1,7 @@
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import action
+from django.db.models import Q
 
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from .permissions import IsOwnerOrAdmin
@@ -20,6 +21,18 @@ class AdvertisementViewSet(ModelViewSet):
     
     filter_backends = [DjangoFilterBackend]
     filterset_class = AdvertisementFilter
+    
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        user = self.request.user
+        
+        if user.is_authenticated:
+            return queryset.filter(
+                Q(status__in=['OPEN', 'CLOSED']) |
+                Q(status='DRAFT', creator=user)
+            )
+            
+        return queryset.filter(status__in=['OPEN', 'CLOSED'])
 
     def get_permissions(self):
         """Получение прав для действий."""
